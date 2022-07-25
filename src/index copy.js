@@ -6,7 +6,8 @@ const config5 = [['(', ')'], ['|', '|']];
 const config6 = [['1', '2'], ['3', '4'], ['5', '6'], ['7', '7'], ['8', '8']];
 const config7 = [['(', ')'], ['[', ']'], ['{', '}'], ['|', '|']];
 
-const str = '||';
+const str1 = '||';
+const str2 = '([{}])';
 
 
 function check(str, bracketsConfig) {
@@ -16,7 +17,7 @@ function check(str, bracketsConfig) {
    for (let i = 0; i < bracketsConfig.length; i++) {
       config = config.concat([...bracketsConfig[i]]);
    }
-
+ 
    const brackets = config.join("");
    console.log(brackets);
 
@@ -37,4 +38,4 @@ function check(str, bracketsConfig) {
    return stack.length === 0;
 }
 
-console.log(check(str, config4));
+console.log(check(str2, config3));
